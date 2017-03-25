@@ -1,6 +1,7 @@
 package com.demirel.common.base.resource;
 
 import com.demirel.common.base.repository.GenericRepository;
+import com.demirel.model.Survey;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Instance;
@@ -42,7 +43,15 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
         return null;
     }
 
-    public T getRepository() {
-        return repository;
+    @Override
+    public Response findById(Long id) {
+        return Response.ok().entity(repository.findById(id)).build();
     }
+
+
+    public Response update(E entity) {
+        repository.update(entity);
+        return Response.ok().build();
+    }
+
 }
