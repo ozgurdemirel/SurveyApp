@@ -1,4 +1,4 @@
-package com.demirel.util;
+package com.demirel.common.dto;
 
 import java.util.List;
 

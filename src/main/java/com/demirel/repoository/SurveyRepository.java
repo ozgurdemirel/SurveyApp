@@ -2,8 +2,8 @@ package com.demirel.repoository;
 
 import com.demirel.model.Survey;
 import com.demirel.model.filter.SurveyFilter;
-import com.demirel.util.GenericRepositoryImpl;
-import com.demirel.util.PaginatedData;
+import com.demirel.common.base.repository.GenericRepositoryImpl;
+import com.demirel.common.dto.PaginatedData;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -12,10 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Stateless
-public class SurveyRepositoryImpl extends GenericRepositoryImpl<Survey> {
+public class SurveyRepository extends GenericRepositoryImpl<Survey> {
 
     @Inject
-    private EntityManager entityManager;
+    protected EntityManager entityManager;
 
     @Override
     protected Class<Survey> getPersistentClass() {

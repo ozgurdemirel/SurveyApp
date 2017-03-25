@@ -1,6 +1,8 @@
-package com.demirel.util;
+package com.demirel.common.base.repository;
 
-import com.demirel.util.filter.PaginationData;
+
+import com.demirel.common.dto.PaginatedData;
+import com.demirel.common.dto.filter.PaginationData;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

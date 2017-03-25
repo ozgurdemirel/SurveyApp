@@ -1,6 +1,6 @@
 package com.demirel.model.filter;
 
-import com.demirel.util.filter.GenericFilter;
+import com.demirel.common.dto.filter.GenericFilter;
 
 /**
  * Created by ozgur on 23.03.2017.

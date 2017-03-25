@@ -1,4 +1,4 @@
-package com.demirel.util.filter;
+package com.demirel.common.dto.filter;
 
 public class GenericFilter {
 	private PaginationData paginationData;

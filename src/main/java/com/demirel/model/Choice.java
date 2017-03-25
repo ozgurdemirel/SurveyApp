@@ -26,6 +26,9 @@ public class Choice implements Serializable {
     @XmlTransient
     private Survey survey;
 
+    @Column
+    private Integer clickCount;
+
     public Long getId() {
         return id;
     }
@@ -48,5 +51,13 @@ public class Choice implements Serializable {
 
     public void setSurvey(Survey survey) {
         this.survey = survey;
+    }
+
+    public Integer getClickCount() {
+        return clickCount;
+    }
+
+    public void setClickCount(Integer clickCount) {
+        this.clickCount = clickCount;
     }
 }

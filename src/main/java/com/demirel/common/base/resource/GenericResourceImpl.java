@@ -1,6 +1,6 @@
-package com.demirel.util.resource;
+package com.demirel.common.base.resource;
 
-import com.demirel.util.GenericRepository;
+import com.demirel.common.base.repository.GenericRepository;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Instance;
@@ -11,7 +11,6 @@ import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Logger;
 
 public abstract class GenericResourceImpl<T extends GenericRepository,E extends Serializable> implements GenericResource<E> {

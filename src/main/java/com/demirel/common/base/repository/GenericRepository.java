@@ -1,4 +1,4 @@
-package com.demirel.util;
+package com.demirel.common.base.repository;
 
 import java.io.Serializable;
 import java.util.List;
