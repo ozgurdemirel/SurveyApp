@@ -1,3 +1,12 @@
-<h1>
- survey
-</h1>
+<span class="animate" ng-repeat="ans in surveyCtl.answers  track by $index">
+       {{$index+1}}
+       <input ng-model="surveyCtl.answers[$index]"/>
+       <button ng-click="surveyCtl.remove($index)">remove</button>
+ <br/>
+
+</span>
+<hr/>
+<input type="button" class="btn" value="Add Answer" ng-click="surveyCtl.addQuestion()"/>
+<input type="button" class="btn" value="Save" ng-click="surveyCtl.save()"/>
+
+
