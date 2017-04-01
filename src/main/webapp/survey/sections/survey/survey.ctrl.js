@@ -1,3 +1,7 @@
-/**
- * Created by ozgur on 27.03.2017.
- */
+angular
+    .module('app.core')
+    .controller('surveyController',function () {
+            var vm = this;
+
+        }
+    );
