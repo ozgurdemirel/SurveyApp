@@ -34,9 +34,9 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
     }
 
     @Override
-    public Response save(E dto) {
+    public Response save(E entity) {
         try {
-            return Response.created(new URI("http://localhost")).entity(dto).build();
+            return Response.created(new URI("")).entity(repository.add(entity)).build();
         } catch (URISyntaxException e) {
             e.printStackTrace(); /// handle or throw
         }
@@ -54,4 +54,7 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
         return Response.ok().build();
     }
 
+    public void setRepository(T repository) {
+        this.repository = repository;
+    }
 }

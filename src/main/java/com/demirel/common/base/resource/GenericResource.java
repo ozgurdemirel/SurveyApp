@@ -17,7 +17,7 @@ public interface GenericResource<E extends Serializable> {
     Response findAll();
 
     @POST
-    Response save(E dto);
+    Response save(E entity);
 
     @GET
     @Path("/{id}")
