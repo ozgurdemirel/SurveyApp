@@ -1,9 +1,9 @@
 angular
     .module('app.core')
-    .controller('surveyController',function () {
+    .controller('surveyController', function (surveyService,$log) {
             var vm = this;
             vm.questionCount = 1;
-            vm.question='';
+            vm.question = '';
             vm.answers = [''];
 
             vm.addQuestion = function () {
@@ -11,12 +11,21 @@ angular
             };
 
             vm.save = function () {
-                console.log(vm.question);
-                console.log(vm.answers);
+                var data = {
+                    'questionText': vm.question,
+                    'choices': []
+                };
+                for (var i = 0; i < vm.answers.length; i++)
+                    data.choices.push({
+                        'choice': vm.answers[i]
+                    });
+                surveyService.save(data).then(function (response) {
+                    $log.info(response)
+                });
             };
 
             vm.remove = function (i) {
-                vm.answers.splice(i,1);
+                vm.answers.splice(i, 1);
             };
 
         }
