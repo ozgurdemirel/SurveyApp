@@ -7,7 +7,6 @@ angular
             vm.answers = [''];
 
             vm.addQuestion = function () {
-                console.log('dasdasd');
                 vm.answers.push('');
             };
 
