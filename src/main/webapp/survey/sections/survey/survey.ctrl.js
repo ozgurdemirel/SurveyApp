@@ -11,6 +11,7 @@ angular
             };
 
             vm.save = function () {
+                console.log(vm.question);
                 console.log(vm.answers);
             };
 
