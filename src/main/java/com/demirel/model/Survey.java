@@ -1,6 +1,7 @@
 package com.demirel.model;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -21,8 +22,8 @@ public class Survey implements Serializable {
     @Column
     private String questionText;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "survey",fetch = FetchType.EAGER)
-    private List<Choice> choices =new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "survey", fetch = FetchType.EAGER)
+    private List<Choice> choices = new ArrayList<>();
 
     public Long getId() {
         return id;
