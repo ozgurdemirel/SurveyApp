@@ -1,4 +1,4 @@
-package com.demirel.rest;
+package com.demirel.conf;
 
 import javax.ws.rs.ext.Provider;
 import javax.ws.rs.container.ContainerResponseFilter;
