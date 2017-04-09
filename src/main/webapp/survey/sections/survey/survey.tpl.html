@@ -1,14 +1,33 @@
-survey question : <input type="text" ng-model="surveyCtl.question"/><br/>
-<input type="button" class="btn" value="Add Answer" ng-click="surveyCtl.addQuestion()"/>
-<input type="button" class="btn" value="Save" ng-click="surveyCtl.save()"/>
-<hr/>
-<span class="animate-repeat" ng-repeat="ans in surveyCtl.answers  track by $index">
-       {{$index+1}}
-       <input ng-model="surveyCtl.answers[$index]"/>
-       <button ng-click="surveyCtl.remove($index)">remove</button>
- <br/>
+<div class="row">
+    <script type="text/ng-template" id="alert.html">
+        <div ng-transclude></div>
+    </script>
 
+    <div uib-alert ng-repeat="alert in surveyCtl.alerts" ng-class="'alert-' + (alert.type || 'warning')"
+         close="surveyCtl.closeAlert($index)">{{alert.msg}}
+    </div>
+
+
+    <div class="form-inline">
+        <label class="control-label">Survey Question : </label>
+        <input type="text" class="form-control input-md" ng-model="surveyCtl.question"/> <input type="button" class="btn"
+                                                                                                value="Add Answer"
+                                                                                                ng-click="surveyCtl.addQuestion()"/>
+        <input type="button" class="btn" value="Save" ng-click="surveyCtl.save()"/><br/>
+    </div>
+
+    <hr class="hr-primary"/><br/>
+    <span class="animate-repeat" ng-repeat="ans in surveyCtl.answers  track by $index"><div class="form-inline">
+       {{$index+1}}
+       <input class="form-control input-md" ng-model="surveyCtl.answers[$index]"/>
+       <button class="form-control input-md" ng-click="surveyCtl.remove($index)">remove</button>
+    <br/>
+    </div>
 </span>
+
+</div>
+
+
 
 
 

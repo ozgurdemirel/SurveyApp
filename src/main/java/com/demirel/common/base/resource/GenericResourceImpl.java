@@ -37,7 +37,7 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
     public Response save(E entity) {
         try {
             return Response.created(new URI("")).entity(repository.add(entity)).build();
-        } catch (URISyntaxException e) {
+        } catch (Exception e) {
             e.printStackTrace(); /// handle or throw
         }
         return null;
@@ -47,7 +47,6 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
     public Response findById(Long id) {
         return Response.ok().entity(repository.findById(id)).build();
     }
-
 
     public Response update(E entity) {
         repository.update(entity);

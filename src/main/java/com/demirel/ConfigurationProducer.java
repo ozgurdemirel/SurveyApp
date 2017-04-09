@@ -6,9 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.logging.Logger;
 
-/**
- * Created by ozgur on 23.03.2017.
- */
 public class ConfigurationProducer {
 
     @Produces

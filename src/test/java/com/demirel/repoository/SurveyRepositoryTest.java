@@ -26,7 +26,6 @@ import static org.junit.Assert.*;
 public class SurveyRepositoryTest extends TestBaseRepository{
 
     //todo : write some test for existById  & filter & filterNull & filterWithPagination & filterByQuestionText
-    private Logger logger = Logger.getLogger(getClass().getName());
     private SurveyRepository surveyRepository;
 
     @Before
