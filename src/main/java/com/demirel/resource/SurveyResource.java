@@ -1,14 +1,15 @@
 package com.demirel.resource;
 
-import com.demirel.common.dto.PaginatedData;
-import com.demirel.common.dto.filter.PaginationData;
+import com.demirel.common.base.resource.GenericResourceImpl;
 import com.demirel.model.Choice;
 import com.demirel.model.Survey;
 import com.demirel.model.filter.SurveyFilter;
 import com.demirel.repoository.SurveyRepository;
-import com.demirel.common.base.resource.GenericResourceImpl;
 
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
