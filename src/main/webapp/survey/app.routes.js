@@ -4,15 +4,20 @@ angular
 
 function routes($routeProvider) {
     $routeProvider
-        .when('/',{
+        .when('/', {
             templateUrl: 'sections/default/default.tpl.html',
             controller: 'defaultController',
-            controllerAs:'defaultCtl'
+            controllerAs: 'defaultCtl'
         })
-        .when('/surveys',{
+        .when('/manage-questions', {
+            templateUrl: 'sections/manage-questions/manage-questions.tpl.html',
+            controller: 'manageQuestionController',
+            controllerAs: 'manageQuestionCtl'
+        })
+        .when('/surveys', {
             templateUrl: 'sections/survey/survey.tpl.html',
-            controller:'surveyController',
-            controllerAs:'surveyCtl'
+            controller: 'surveyController',
+            controllerAs: 'surveyCtl'
         })
         .when('/404', {
             templateUrl: 'sections/404/404.tpl.html'

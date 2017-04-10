@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Survey App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/angular-growl.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body ng-app="app">
@@ -25,7 +26,7 @@
                     <a href="#/">Home</a>
                 </li>
                 <li>
-                    <a href="#/create-survey">All Surveys</a>
+                    <a href="#/manage-questions">All Surveys</a>
                 </li>
                 <li>
                     <a href="#/surveys">Create Survey</a>
@@ -44,6 +45,7 @@
 <script src="assets/js/ui-bootstrap-tpls-2.5.0.min.js"></script>
 <script src="assets/js/angular-local-storage.min.js"></script>
 <script src="assets/js/angular-preload-image.js"></script>
+<script src="assets/js/angular-growl.min.js"></script>
 
 <script src="app.js"></script>
 <script src="app.core.js"></script>
@@ -57,6 +59,7 @@
 <!-- controllers -->
 <script src="sections/default/default.ctrl.js"></script>
 <script src="sections/survey/survey.ctrl.js"></script>
+<script src="sections/manage-questions/manage-questions.ctrl.js"></script>
 <!-- components -->
 
 <!-- directives -->

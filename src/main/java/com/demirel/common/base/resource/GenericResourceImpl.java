@@ -56,4 +56,8 @@ public abstract class GenericResourceImpl<T extends GenericRepository,E extends 
     public void setRepository(T repository) {
         this.repository = repository;
     }
+
+    public T getRepository() {
+        return repository;
+    }
 }

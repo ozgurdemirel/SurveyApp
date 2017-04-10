@@ -1,19 +1,17 @@
 angular
     .module('app.core')
-    .controller('surveyController', function (surveyService,$log) {
+    .controller('surveyController', function (surveyService,$log,growl) {
             var vm = this;
             vm.questionCount = 1;
             vm.question = '';
             vm.answers = [''];
-            vm.alerts = [];
 
             vm._addAlert = function (msg) {
-              vm.alerts = [];
-              vm.alerts.push({'msg' : msg });
-            };
-
-            vm.closeAlert = function (index) {
-                vm.alerts.splice(index,1);
+              growl.success(msg,{title: 'Seems good!'});
+             // growl.warning(msg,{title: 'Warning!'});
+              // growl.error('This is error message.',{title: 'Error!'});
+              // growl.success('This is success message.',{title: 'Success!'});
+              // growl.info('This is an info message.',{title: 'Info!'});
             };
 
             vm.addQuestion = function () {
@@ -31,7 +29,7 @@ angular
                     });
                 surveyService.save(data).then(function (response) {
                     $log.info(response);
-                    vm._addAlert('question added successfully');
+                    vm._addAlert('Question added successfully');
                     vm._reset();
                 });
             };

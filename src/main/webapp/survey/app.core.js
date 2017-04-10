@@ -1,1 +1,1 @@
-angular.module('app.core', ['ui.bootstrap', 'ngAnimate', 'LocalStorageModule', 'ngMessages', 'angular-preload-image']);
+angular.module('app.core', ['ui.bootstrap', 'ngAnimate', 'LocalStorageModule', 'ngMessages', 'angular-preload-image','angular-growl']);
