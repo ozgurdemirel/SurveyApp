@@ -1,0 +1,14 @@
+<div class="row well">
+  <div class="col-md-12">
+    <button class="btn" (click)="addBox()">Add Answer</button>
+  </div>
+</div>
+<div class="row well" *ngFor="let item of answers;let index = index;trackBy:trackByIndex">
+
+    <div class="col-sm-10">
+      <input class="form-control" [(ngModel)]="answers[index]" placeholder="{{index +1}}. answer">
+    </div>
+    <button   class="col-sm-2 btn">Delete</button>
+
+
+</div>
