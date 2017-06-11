@@ -1,20 +1,33 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Survey} from "../../domain/Survey";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   moduleId:module.id,
   selector: 'survey',
   templateUrl: 'survey.component.html'
 })
-export class SurveyComponent {
+export class SurveyComponent implements OnInit{
 
-  public answers:string[] = [''];
+  private survey:Survey;
+
+
+  constructor(){}
+
+  ngOnInit(){
+    this.survey = new Survey();
+  }
 
   addBox(){
-    this.answers.push('');
+    this.survey.choices.push('');
   }
 
   trackByIndex(index: number, obj: any): any {
     return index;
+  }
+
+  removeFromList(i){
+    this.survey.choices.splice(i,1);
   }
 
   save(){
