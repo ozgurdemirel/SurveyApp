@@ -1,24 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {Survey} from "../../domain/Survey";
-import {FormBuilder} from "@angular/forms";
+import {Message} from 'primeng/primeng';
+
 
 @Component({
-  moduleId:module.id,
+  moduleId: module.id,
   selector: 'survey',
   templateUrl: 'survey.component.html'
 })
-export class SurveyComponent implements OnInit{
+export class SurveyComponent implements OnInit {
 
-  private survey:Survey;
+  private survey: Survey;
+  private msgs: Message[] = [];
 
+  constructor() {
+  }
 
-  constructor(){}
-
-  ngOnInit(){
+  ngOnInit() {
     this.survey = new Survey();
   }
 
-  addBox(){
+  addBox() {
     this.survey.choices.push('');
   }
 
@@ -26,12 +28,14 @@ export class SurveyComponent implements OnInit{
     return index;
   }
 
-  removeFromList(i){
-    this.survey.choices.splice(i,1);
+  removeFromList(i) {
+    this.survey.choices.splice(i, 1);
   }
 
-  save(){
+  save() {
     console.log('im saving something');
+    this.msgs = [];
+    this.msgs.push({severity:'info', summary:'Info Message', detail:'Successfully saved...'});
   }
 
 }

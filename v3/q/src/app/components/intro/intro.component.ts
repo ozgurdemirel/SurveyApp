@@ -6,4 +6,5 @@ import {Component} from '@angular/core';
   templateUrl: 'intro.component.html'
 })
 export class IntroComponent {
+  checked2: boolean = true;
 }
