@@ -10,8 +10,8 @@ import {Message} from 'primeng/primeng';
 })
 export class SurveyComponent implements OnInit {
 
-  private survey: Survey;
-  private msgs: Message[] = [];
+  survey: Survey;
+  msgs: Message[] = [];
 
   constructor() {
   }
